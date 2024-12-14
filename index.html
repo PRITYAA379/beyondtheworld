@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>digital servicess with preet</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a1a; /* Dark background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Moon Container */
+    .moon-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 40%, rgba(0, 0, 0, 0.6) 100%);
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.6); /* Glowing effect */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: rotateMoon 10s linear infinite; /* Rotate effect */
+    }
+
+    /* Moon Shadow (to create crescent effect) */
+    .moon-shadow {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: #1a1a1a; /* Dark color to create the crescent shadow */
+      top: 25px;
+      left: 25px;
+      z-index: 1;
+    }
+
+    /* Animation for the moon's rotation */
+    @keyframes rotateMoon {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Text inside the moon */
+    .moon-text {
+      position: absolute;
+      font-size: 2rem;
+      color: #f1f1f1;
+      text-align: center;
+      z-index: 2;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="moon-container">
+    <div class="moon-shadow"></div>
+    <div class="moon-text">digital servicess with preet </div>
+  </div>
+</body>
+
+</html>
